@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCE378911BC7353000059B49 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE378901BC7353000059B49 /* MapKit.framework */; };
 		CCEC28E71BC6E63B007CE433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC28E61BC6E63B007CE433 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		CCEC28EC1BC6E671007CE433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28E91BC6E671007CE433 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		CCEC28ED1BC6E671007CE433 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28EA1BC6E671007CE433 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CCE378901BC7353000059B49 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCEC28CA1BC6E438007CE433 /* EatNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEC28E51BC6E63B007CE433 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		CCEC28E61BC6E63B007CE433 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
@@ -34,16 +36,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE378911BC7353000059B49 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CCE3788F1BC7351100059B49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCE378901BC7353000059B49 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CCEC28C11BC6E438007CE433 = {
 			isa = PBXGroup;
 			children = (
 				CCEC28CC1BC6E438007CE433 /* EatNow */,
+				CCE3788F1BC7351100059B49 /* Frameworks */,
 				CCEC28CB1BC6E438007CE433 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -297,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = EatNow/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EatNow/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ExNihilo.EatNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = EatNow/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EatNow/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ExNihilo.EatNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +348,7 @@
 				CCEC28E31BC6E438007CE433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

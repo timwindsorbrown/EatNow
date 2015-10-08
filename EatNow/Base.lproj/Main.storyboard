@@ -16,26 +16,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-2x-RX7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnt-ti-3yp" userLabel="ContentView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTt-tC-xZ0">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-2x-RX7">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="cFT-MI-vpq"/>
+                                        </connections>
+                                    </mapView>
+                                </subviews>
                                 <animations/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehM-GO-FoD">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1V1-2x-RX7" firstAttribute="top" secondItem="qnt-ti-3yp" secondAttribute="top" id="2Ww-QL-jhC"/>
+                                    <constraint firstItem="hTt-tC-xZ0" firstAttribute="top" secondItem="qnt-ti-3yp" secondAttribute="top" id="9k2-Pe-UK3"/>
+                                    <constraint firstAttribute="trailing" secondItem="1V1-2x-RX7" secondAttribute="trailing" id="SzW-4d-RhR"/>
+                                    <constraint firstAttribute="bottom" secondItem="1V1-2x-RX7" secondAttribute="bottom" id="XIk-DA-6Dq"/>
+                                    <constraint firstItem="hTt-tC-xZ0" firstAttribute="leading" secondItem="qnt-ti-3yp" secondAttribute="leading" id="bvh-u9-aRh"/>
+                                    <constraint firstItem="1V1-2x-RX7" firstAttribute="leading" secondItem="qnt-ti-3yp" secondAttribute="leading" id="djU-B0-9WE"/>
+                                    <constraint firstAttribute="trailing" secondItem="hTt-tC-xZ0" secondAttribute="trailing" id="iXF-Sa-gQN"/>
+                                    <constraint firstAttribute="bottom" secondItem="hTt-tC-xZ0" secondAttribute="bottom" id="rR6-x2-afW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehM-GO-FoD">
                                 <rect key="frame" x="20" y="532" width="560" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="yd8-f2-48U"/>
+                                </constraints>
                                 <state key="normal" title="Find Food!"/>
+                                <connections>
+                                    <action selector="findFoodPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4V-N4-Ncg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gza-3B-jjk" userLabel="ListButton">
+                                <rect key="frame" x="554" y="285" width="46" height="95"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.061628092080000002" green="0.4794644415" blue="0.80566126110000003" alpha="0.52254533179012341" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="GYb-gS-Hos"/>
+                                    <constraint firstAttribute="width" constant="46" id="LWC-l1-pXj"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="listButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2s-CF-7gB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNp-ib-u4S" userLabel="MapButton">
+                                <rect key="frame" x="554" y="355" width="46" height="95"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.84313726430000002" green="0.5176470876" blue="0.0078431377190000002" alpha="0.82431520061728392" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="KqS-nL-s6j"/>
+                                    <constraint firstAttribute="width" constant="46" id="REl-mY-VLd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="mapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1rX-RK-v1k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1V1-2x-RX7" secondAttribute="bottom" id="6Zf-CI-jMp"/>
-                            <constraint firstItem="1V1-2x-RX7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lqt-IX-obR"/>
-                            <constraint firstItem="1V1-2x-RX7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rdZ-9Y-CN7"/>
-                            <constraint firstAttribute="trailing" secondItem="1V1-2x-RX7" secondAttribute="trailing" id="rz9-fk-lEe"/>
+                            <constraint firstItem="qnt-ti-3yp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6mL-fN-jkM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qnt-ti-3yp" secondAttribute="bottom" id="8ME-CH-3q4"/>
+                            <constraint firstItem="ehM-GO-FoD" firstAttribute="top" secondItem="BNp-ib-u4S" secondAttribute="bottom" constant="82" id="9T9-la-waM"/>
+                            <constraint firstAttribute="trailing" secondItem="ehM-GO-FoD" secondAttribute="trailing" constant="20" id="EHU-3M-Fyb"/>
+                            <constraint firstAttribute="trailing" secondItem="BNp-ib-u4S" secondAttribute="trailing" id="Ef2-Xn-UiL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ehM-GO-FoD" secondAttribute="bottom" constant="23" id="Yh3-Hj-EcE"/>
+                            <constraint firstAttribute="trailing" secondItem="qnt-ti-3yp" secondAttribute="trailing" id="uaU-cb-O8U"/>
+                            <constraint firstItem="qnt-ti-3yp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vBw-5Z-Ry1"/>
+                            <constraint firstItem="ehM-GO-FoD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wJA-mc-SJL"/>
+                            <constraint firstAttribute="trailing" secondItem="gza-3B-jjk" secondAttribute="trailing" id="yWO-zx-IhE"/>
+                            <constraint firstItem="ehM-GO-FoD" firstAttribute="top" secondItem="gza-3B-jjk" secondAttribute="bottom" constant="152" id="zzj-ng-QTF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="qnt-ti-3yp" id="P1v-n9-Hc8"/>
+                        <outlet property="findFoodButton" destination="ehM-GO-FoD" id="2U8-ij-ynF"/>
+                        <outlet property="mapView" destination="1V1-2x-RX7" id="xto-Sf-VJo"/>
+                        <outlet property="tableView" destination="hTt-tC-xZ0" id="hdb-pa-HDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
