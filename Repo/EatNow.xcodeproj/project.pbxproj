@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCEC28E71BC6E63B007CE433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC28E61BC6E63B007CE433 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		CCEC28EC1BC6E671007CE433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28E91BC6E671007CE433 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		CCEC28ED1BC6E671007CE433 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28EA1BC6E671007CE433 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		CCEC28EE1BC6E671007CE433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC28EB1BC6E671007CE433 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		CCEC28F31BC6E688007CE433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28EF1BC6E688007CE433 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		CCEC28F41BC6E688007CE433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28F11BC6E688007CE433 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		CCEC28FB1BC6E702007CE433 /* NearMeMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC28FA1BC6E702007CE433 /* NearMeMapVC.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CCEC28CA1BC6E438007CE433 /* EatNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEC28E51BC6E63B007CE433 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		CCEC28E61BC6E63B007CE433 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		CCEC28E91BC6E671007CE433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SupportingFiles/Assets.xcassets; sourceTree = "<group>"; };
+		CCEC28EA1BC6E671007CE433 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
+		CCEC28EB1BC6E671007CE433 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SupportingFiles/main.m; sourceTree = "<group>"; };
+		CCEC28F01BC6E688007CE433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCEC28F21BC6E688007CE433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCEC28F91BC6E702007CE433 /* NearMeMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearMeMapVC.h; path = Classes/UI/NearMeMapVC.h; sourceTree = "<group>"; };
+		CCEC28FA1BC6E702007CE433 /* NearMeMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearMeMapVC.m; path = Classes/UI/NearMeMapVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCEC28C71BC6E438007CE433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCEC28C11BC6E438007CE433 = {
+			isa = PBXGroup;
+			children = (
+				CCEC28CC1BC6E438007CE433 /* EatNow */,
+				CCEC28CB1BC6E438007CE433 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCEC28CB1BC6E438007CE433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC28CA1BC6E438007CE433 /* EatNow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCEC28CC1BC6E438007CE433 /* EatNow */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC28E41BC6E5EE007CE433 /* Classes */,
+				CCEC28CD1BC6E438007CE433 /* Supporting Files */,
+			);
+			path = EatNow;
+			sourceTree = "<group>";
+		};
+		CCEC28CD1BC6E438007CE433 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC28E91BC6E671007CE433 /* Assets.xcassets */,
+				CCEC28EA1BC6E671007CE433 /* Info.plist */,
+				CCEC28EB1BC6E671007CE433 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCEC28E41BC6E5EE007CE433 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC28F61BC6E6A2007CE433 /* UI */,
+				CCEC28F51BC6E69C007CE433 /* Model */,
+				CCEC28E81BC6E656007CE433 /* Storyboards */,
+				CCEC28E51BC6E63B007CE433 /* AppDelegate.h */,
+				CCEC28E61BC6E63B007CE433 /* AppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CCEC28E81BC6E656007CE433 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC28EF1BC6E688007CE433 /* LaunchScreen.storyboard */,
+				CCEC28F11BC6E688007CE433 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CCEC28F51BC6E69C007CE433 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CCEC28F61BC6E6A2007CE433 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC28F91BC6E702007CE433 /* NearMeMapVC.h */,
+				CCEC28FA1BC6E702007CE433 /* NearMeMapVC.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCEC28C91BC6E438007CE433 /* EatNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCEC28E11BC6E438007CE433 /* Build configuration list for PBXNativeTarget "EatNow" */;
+			buildPhases = (
+				CCEC28C61BC6E438007CE433 /* Sources */,
+				CCEC28C71BC6E438007CE433 /* Frameworks */,
+				CCEC28C81BC6E438007CE433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EatNow;
+			productName = EatNow;
+			productReference = CCEC28CA1BC6E438007CE433 /* EatNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCEC28C21BC6E438007CE433 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = ExNihilo;
+				TargetAttributes = {
+					CCEC28C91BC6E438007CE433 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CCEC28C51BC6E438007CE433 /* Build configuration list for PBXProject "EatNow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCEC28C11BC6E438007CE433;
+			productRefGroup = CCEC28CB1BC6E438007CE433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCEC28C91BC6E438007CE433 /* EatNow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCEC28C81BC6E438007CE433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEC28F31BC6E688007CE433 /* LaunchScreen.storyboard in Resources */,
+				CCEC28ED1BC6E671007CE433 /* Info.plist in Resources */,
+				CCEC28EC1BC6E671007CE433 /* Assets.xcassets in Resources */,
+				CCEC28F41BC6E688007CE433 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCEC28C61BC6E438007CE433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCEC28E71BC6E63B007CE433 /* AppDelegate.m in Sources */,
+				CCEC28EE1BC6E671007CE433 /* main.m in Sources */,
+				CCEC28FB1BC6E702007CE433 /* NearMeMapVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCEC28EF1BC6E688007CE433 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCEC28F01BC6E688007CE433 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CCEC28F11BC6E688007CE433 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCEC28F21BC6E688007CE433 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCEC28DF1BC6E438007CE433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CCEC28E01BC6E438007CE433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCEC28E21BC6E438007CE433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = EatNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ExNihilo.EatNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCEC28E31BC6E438007CE433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = EatNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ExNihilo.EatNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCEC28C51BC6E438007CE433 /* Build configuration list for PBXProject "EatNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEC28DF1BC6E438007CE433 /* Debug */,
+				CCEC28E01BC6E438007CE433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCEC28E11BC6E438007CE433 /* Build configuration list for PBXNativeTarget "EatNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCEC28E21BC6E438007CE433 /* Debug */,
+				CCEC28E31BC6E438007CE433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCEC28C21BC6E438007CE433 /* Project object */;
+}
