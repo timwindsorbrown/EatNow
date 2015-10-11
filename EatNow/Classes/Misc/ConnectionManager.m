@@ -20,11 +20,9 @@ static NSString* kGooglePlacesAPIKey = @"AIzaSyCeplRU7YygTzT9zR7juLXkj-gTrkQhURk
                       radius:(float)radius
                   completion:(void (^)(NSArray* places))completionBlock
                   errorBlock:(void (^)(NSError* error))errorBlock {
-   
-    // https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=30.324721,78.043533&radius=5000&key=AIzaSyCeplRU7YygTzT9zR7juLXkj-gTrkQhURk
     
-//    NSString *baseUrl = @"https://maps.googleapis.com/maps/api/place/nearbysearch/json";
-    
+    // Google Places API Documentation:
+    // https://developers.google.com/places/web-service/?hl=en_US
     
     NSString *fullUrl = [NSString stringWithFormat:
                          @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=%0.f&type=%@&key=%@",
@@ -35,7 +33,7 @@ static NSString* kGooglePlacesAPIKey = @"AIzaSyCeplRU7YygTzT9zR7juLXkj-gTrkQhURk
                          kGooglePlacesAPIKey
                          ];
     
-    NSLog(@"URL: %@", fullUrl);
+    NSLog(@"Request URL: %@", fullUrl);
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -61,12 +59,10 @@ static NSString* kGooglePlacesAPIKey = @"AIzaSyCeplRU7YygTzT9zR7juLXkj-gTrkQhURk
             }
         }
         
-        
         completionBlock([NSArray arrayWithArray:places]);
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         
-        NSLog(@"Fail: %@", error);
         errorBlock(error);
     }];
     
@@ -103,6 +99,7 @@ static NSString* kGooglePlacesAPIKey = @"AIzaSyCeplRU7YygTzT9zR7juLXkj-gTrkQhURk
     if (rating != nil && [rating isKindOfClass:[NSNumber class]]) {
         place.rating = rating.stringValue;
     }
+
 
     
     return place;

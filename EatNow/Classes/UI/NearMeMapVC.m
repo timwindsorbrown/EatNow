@@ -13,22 +13,15 @@
 #import "PlaceCell.h"
 #import "PlaceAnnotation.h"
 
-@import GoogleMaps;
-
-@interface NearMeMapVC () <CLLocationManagerDelegate, GMSMapViewDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface NearMeMapVC () <CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-//@property (strong, nonatomic) IBOutlet GMSMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIButton *findFoodButton;
-@property (strong, nonatomic) UIButton *showMapButton;
-@property (strong, nonatomic) UIButton *showListButton;
 @property (weak, nonatomic) IBOutlet UIButton *viewTypeButton;
 
-@property (strong, nonatomic) GMSPlacesClient *placesClient;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-
 @property (strong, nonatomic) CLLocation *currentLoction;
 @property (strong, nonatomic) NSArray *placeAnnotations;
 
@@ -43,15 +36,14 @@
     
     [super viewDidLoad];
     
+    // Setup location manager
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-    
     [self.locationManager requestWhenInUseAuthorization];
     
     // Set default view display
-    [self.viewTypeButton setImage:[UIImage imageNamed:@"Map_Small"] forState:UIControlStateNormal];
-    [self.containerView bringSubviewToFront:self.tableView];
-
+    [self.viewTypeButton setImage:[UIImage imageNamed:@"List_Small"] forState:UIControlStateNormal];
+    [self.containerView bringSubviewToFront:self.mapView];
 
     // Setup TableView
     self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 80, 0);
@@ -62,16 +54,15 @@
 
 - (IBAction) viewTypeButtonPressed:(UIButton *)sender {
     
-    int mapViewIndex = [[self.mapView superview].subviews indexOfObject:self.mapView];
-    int listViewIndex = [[self.tableView superview].subviews indexOfObject:self.tableView];
+    NSUInteger mapViewIndex = [[self.mapView superview].subviews indexOfObject:self.mapView];
+    NSUInteger listViewIndex = [[self.tableView superview].subviews indexOfObject:self.tableView];
     
-    
-    if (mapViewIndex > listViewIndex) { // Map on top
+    if (mapViewIndex > listViewIndex) { // List on top
         [sender setImage:[UIImage imageNamed:@"Map_Small"] forState:UIControlStateNormal];
         [self.containerView bringSubviewToFront:self.tableView];
 
     }
-    else { // List on top
+    else { // Map on top
         [sender setImage:[UIImage imageNamed:@"List_Small"] forState:UIControlStateNormal];
         [self.containerView bringSubviewToFront:self.mapView];
     }
@@ -86,7 +77,7 @@
         
         [sender showLoading:true];
         
-        float oneMile = 1.61 * 1000;
+        float oneMile = 1.61 * 1000; // 1 mile -> meters
         [ConnectionManager requestPlacesNearMe:self.currentLoction.coordinate
                                 googleMapsType:@"food"
                                         radius:oneMile
@@ -101,12 +92,21 @@
          } errorBlock:^(NSError *error) {
              
              [sender showLoading:false];
+             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error!" message:@"Unable to search for places, check your network and try again." preferredStyle:UIAlertControllerStyleAlert];
+             [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+             [self presentViewController:alert animated:true completion:nil];
              NSLog(@"Error: %@", error);
          }];
+    }
+    else {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error!" message:@"Cannont determine your location, check your settings and try again." preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:true completion:nil];
     }
     
 }
 
+// Has reloaded data, refresh data sources
 - (void) dataReloaded {
     
     [self removeAnnotations];
@@ -117,12 +117,12 @@
         annotation.title = annotation.name;
         view.canShowCallout = true;
     }
-    [self.tableView reloadData];
     
-    MKCoordinateRegion region = [self getMapZoomSpanFromObjects:self.placeAnnotations];
-    
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:true];
+    // Zoom to show all pins
+    MKMapRect rect = [self getMapZoomSpanFromObjects:self.placeAnnotations];
+    [self.mapView setVisibleMapRect:rect animated:YES];
 
+    [self.tableView reloadData];
     
 }
 
@@ -140,9 +140,10 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+    
+    self.currentLoction = userLocation.location;
+
     if (self.currentLoction == nil) {
-        
-        self.currentLoction = userLocation.location;
         
         MKCoordinateRegion region = [self getMapZoomSpanForLocation:userLocation.location.coordinate];
         
@@ -172,6 +173,7 @@
     
 }
 
+
 #pragma mark - TableView Delegates
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -182,26 +184,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-//    NSString *cellId = @"identifier";
      PlaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlaceCell"];
-    
-//    if (!cell)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PlaceCell"];
-//    }
-//    
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#Prototype Identifier#>];
-    
     [cell setupWithPlace:self.placeAnnotations[indexPath.row]];
     
     return cell;
 }
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
-
 
 
 #pragma mark - Misc Functions
@@ -217,52 +204,34 @@
     return region;
 }
 
-- (MKCoordinateRegion) getMapZoomSpanFromObjects:(NSArray*)annotations
+- (MKMapRect) getMapZoomSpanFromObjects:(NSArray*)annotations
 {
-    float maxLat = 0;
-    float minLat = 55;
-    float maxLong = 0;
-    float minLong = 1;
-    
-    for (PlaceAnnotation *annotation in annotations)
+    MKMapPoint annotationPoint = MKMapPointForCoordinate(self.mapView.userLocation.coordinate);
+    MKMapRect zoomRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+    for (id <MKAnnotation> annotation in self.mapView.annotations)
     {
-        minLat = (annotation.coordinate.latitude < minLat) ? annotation.coordinate.latitude : minLat;
-        maxLat = (annotation.coordinate.latitude > maxLat) ? annotation.coordinate.latitude : maxLat;
-        minLong = (annotation.coordinate.longitude < minLong) ? annotation.coordinate.longitude : minLong;
-        maxLong = (annotation.coordinate.longitude > maxLong) ? annotation.coordinate.longitude : maxLong;
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+        zoomRect = MKMapRectUnion(zoomRect, pointRect);
     }
     
-    CLLocationDegrees deltaLat = maxLat-minLat;
-    
-    CLLocationDegrees deltaLong = maxLong-minLong;
-    
-    CLLocationCoordinate2D centerCoord = CLLocationCoordinate2DMake(minLat + deltaLat/2, minLong + deltaLong/2);
-    
-    // Add margin between pins and edgeo of mapview
-    deltaLat = deltaLat * 1;
-    deltaLong = deltaLong * 1;
-    
-    MKCoordinateSpan span = MKCoordinateSpanMake(deltaLat, deltaLong);
-    
-    return MKCoordinateRegionMake(centerCoord, span);
+    // Add Padding
+    double inset = -zoomRect.size.width * 0.1;
+    zoomRect = MKMapRectInset(zoomRect, inset, inset);
+    return zoomRect;
     
 }
 
 - (void)removeAnnotations
 {
     
-    NSArray *annotationsToRemove = @[];
-    
     for (id<MKAnnotation> annotation in self.mapView.annotations)
     {
         if (![annotation isKindOfClass:[MKUserLocation class]])
         {
-            annotationsToRemove = [annotationsToRemove arrayByAddingObject:annotation];
+            [self.mapView removeAnnotation:annotation];
         }
     }
-    
-    [self.mapView removeAnnotations:annotationsToRemove];
-    
 }
 
 

@@ -99,7 +99,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehM-GO-FoD" customClass="LoadingButton">
                                 <rect key="frame" x="20" y="532" width="507" height="45"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84313726430000002" green="0.5176470876" blue="0.0078431377190000002" alpha="0.82431520059999996" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.67450980392156867" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="rzg-QO-XZq"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtA-Gh-aM3">
                                 <rect key="frame" x="535" y="532" width="45" height="45"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.84313726430000002" green="0.5176470876" blue="0.0078431377190000002" alpha="0.82431520059999996" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cyan="0.0" magenta="0.26686885339999999" yellow="0.97551023960000005" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="aWz-ty-hA4"/>
                                     <constraint firstAttribute="width" constant="45" id="tW1-XY-wdX"/>
