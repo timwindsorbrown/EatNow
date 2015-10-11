@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B06244095FD1A08326AFD038 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACBB3A66E4701754ED0E956 /* libPods.a */; };
+		CC0F23D81BC95E9B0079F2B0 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0F23D71BC95E9B0079F2B0 /* ConnectionManager.m */; settings = {ASSET_TAGS = (); }; };
+		CC8932581BC96DA300A34801 /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8932571BC96DA300A34801 /* PlaceAnnotation.m */; settings = {ASSET_TAGS = (); }; };
+		CC89325B1BC96DC500A34801 /* LoadingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CC89325A1BC96DC500A34801 /* LoadingButton.m */; settings = {ASSET_TAGS = (); }; };
+		CCD37FA61BC9D1FA000ED7BB /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD37FA51BC9D1FA000ED7BB /* PlaceCell.m */; settings = {ASSET_TAGS = (); }; };
 		CCE378911BC7353000059B49 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE378901BC7353000059B49 /* MapKit.framework */; };
 		CCEC28E71BC6E63B007CE433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC28E61BC6E63B007CE433 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		CCEC28EC1BC6E671007CE433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28E91BC6E671007CE433 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		CCEC28ED1BC6E671007CE433 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28EA1BC6E671007CE433 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		CCEC28EE1BC6E671007CE433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC28EB1BC6E671007CE433 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		CCEC28F31BC6E688007CE433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28EF1BC6E688007CE433 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		CCEC28F41BC6E688007CE433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEC28F11BC6E688007CE433 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -18,6 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ACBB3A66E4701754ED0E956 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		39DF018C65C99FCF43E978AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CC0F23D61BC95E9B0079F2B0 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Classes/Misc/ConnectionManager.h; sourceTree = "<group>"; };
+		CC0F23D71BC95E9B0079F2B0 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Classes/Misc/ConnectionManager.m; sourceTree = "<group>"; };
+		CC8932561BC96DA300A34801 /* PlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceAnnotation.h; path = Classes/Model/PlaceAnnotation.h; sourceTree = "<group>"; };
+		CC8932571BC96DA300A34801 /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceAnnotation.m; path = Classes/Model/PlaceAnnotation.m; sourceTree = "<group>"; };
+		CC8932591BC96DC500A34801 /* LoadingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingButton.h; path = Classes/UI/LoadingButton.h; sourceTree = "<group>"; };
+		CC89325A1BC96DC500A34801 /* LoadingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingButton.m; path = Classes/UI/LoadingButton.m; sourceTree = "<group>"; };
+		CCD37FA41BC9D1FA000ED7BB /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Classes/UI/PlaceCell.h; sourceTree = "<group>"; };
+		CCD37FA51BC9D1FA000ED7BB /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Classes/UI/PlaceCell.m; sourceTree = "<group>"; };
 		CCE378901BC7353000059B49 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCEC28CA1BC6E438007CE433 /* EatNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEC28E51BC6E63B007CE433 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +43,7 @@
 		CCEC28F21BC6E688007CE433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCEC28F91BC6E702007CE433 /* NearMeMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearMeMapVC.h; path = Classes/UI/NearMeMapVC.h; sourceTree = "<group>"; };
 		CCEC28FA1BC6E702007CE433 /* NearMeMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearMeMapVC.m; path = Classes/UI/NearMeMapVC.m; sourceTree = "<group>"; };
+		D6A52FF2D6E3F41CB2DDA6DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,16 +52,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE378911BC7353000059B49 /* MapKit.framework in Frameworks */,
+				B06244095FD1A08326AFD038 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0F23D91BC95E9F0079F2B0 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CC0F23D61BC95E9B0079F2B0 /* ConnectionManager.h */,
+				CC0F23D71BC95E9B0079F2B0 /* ConnectionManager.m */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		CCE3788F1BC7351100059B49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				CCE378901BC7353000059B49 /* MapKit.framework */,
+				0ACBB3A66E4701754ED0E956 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -57,6 +83,7 @@
 				CCEC28CC1BC6E438007CE433 /* EatNow */,
 				CCE3788F1BC7351100059B49 /* Frameworks */,
 				CCEC28CB1BC6E438007CE433 /* Products */,
+				EEBA5F198340D0E68E8706AF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +117,7 @@
 		CCEC28E41BC6E5EE007CE433 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CC0F23D91BC95E9F0079F2B0 /* Misc */,
 				CCEC28F61BC6E6A2007CE433 /* UI */,
 				CCEC28F51BC6E69C007CE433 /* Model */,
 				CCEC28E81BC6E656007CE433 /* Storyboards */,
@@ -111,6 +139,8 @@
 		CCEC28F51BC6E69C007CE433 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC8932561BC96DA300A34801 /* PlaceAnnotation.h */,
+				CC8932571BC96DA300A34801 /* PlaceAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -118,10 +148,23 @@
 		CCEC28F61BC6E6A2007CE433 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CCD37FA41BC9D1FA000ED7BB /* PlaceCell.h */,
+				CCD37FA51BC9D1FA000ED7BB /* PlaceCell.m */,
 				CCEC28F91BC6E702007CE433 /* NearMeMapVC.h */,
 				CCEC28FA1BC6E702007CE433 /* NearMeMapVC.m */,
+				CC8932591BC96DC500A34801 /* LoadingButton.h */,
+				CC89325A1BC96DC500A34801 /* LoadingButton.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		EEBA5F198340D0E68E8706AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6A52FF2D6E3F41CB2DDA6DC /* Pods.debug.xcconfig */,
+				39DF018C65C99FCF43E978AB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCEC28E11BC6E438007CE433 /* Build configuration list for PBXNativeTarget "EatNow" */;
 			buildPhases = (
+				35DAECF6555757065D6FB8DE /* Check Pods Manifest.lock */,
 				CCEC28C61BC6E438007CE433 /* Sources */,
 				CCEC28C71BC6E438007CE433 /* Frameworks */,
 				CCEC28C81BC6E438007CE433 /* Resources */,
+				2FDA6709BEF28B2FB12D129A /* Embed Pods Frameworks */,
+				4300F2C4A338537378C3FF90 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCEC28F31BC6E688007CE433 /* LaunchScreen.storyboard in Resources */,
-				CCEC28ED1BC6E671007CE433 /* Info.plist in Resources */,
 				CCEC28EC1BC6E671007CE433 /* Assets.xcassets in Resources */,
 				CCEC28F41BC6E688007CE433 /* Main.storyboard in Resources */,
 			);
@@ -191,12 +236,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FDA6709BEF28B2FB12D129A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35DAECF6555757065D6FB8DE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4300F2C4A338537378C3FF90 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCEC28C61BC6E438007CE433 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8932581BC96DA300A34801 /* PlaceAnnotation.m in Sources */,
+				CCD37FA61BC9D1FA000ED7BB /* PlaceCell.m in Sources */,
 				CCEC28E71BC6E63B007CE433 /* AppDelegate.m in Sources */,
+				CC89325B1BC96DC500A34801 /* LoadingButton.m in Sources */,
+				CC0F23D81BC95E9B0079F2B0 /* ConnectionManager.m in Sources */,
 				CCEC28EE1BC6E671007CE433 /* main.m in Sources */,
 				CCEC28FB1BC6E702007CE433 /* NearMeMapVC.m in Sources */,
 			);
@@ -306,12 +403,15 @@
 		};
 		CCEC28E21BC6E438007CE433 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A52FF2D6E3F41CB2DDA6DC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/EatNow/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ExNihilo.EatNow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExNihilo.EatNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -319,12 +419,15 @@
 		};
 		CCEC28E31BC6E438007CE433 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DF018C65C99FCF43E978AB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/EatNow/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ExNihilo.EatNow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExNihilo.EatNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
