@@ -1,2 +1,2 @@
-# EatNow
-Super simple app to find places to eat nearby. Now.
+# EatNow iOS
+Super simple iOS app to find places to eat nearby. Now.
