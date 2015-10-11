@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-@import GoogleMaps;
 
 @interface AppDelegate ()
 
@@ -18,10 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    // Setup Google Maps
-    NSString *googleAPIKey = @"AIzaSyChXOFIK51X3t8T7SgVUfpi8UhC7gZF6SA";
-    [GMSServices provideAPIKey:googleAPIKey];
-    
     
     return YES;
 }
